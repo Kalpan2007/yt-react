@@ -1,22 +1,22 @@
-import { useState , useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import './Mainone.css';
 
 function MainContent() {
 
 
-    const [videoData,setVideoData] = useState([]);
+    const [videoData, setVideoData] = useState([]);
 
 
     useEffect(() => {
-        fetch('http://localhost:5000/videoData')
-            .then((response) => response.json())
-            .then((data) => {
-                console.log('Fetched video data:', data); 
-                setVideoData(data); 
-            })
-            .catch((error) => {
-                console.error('Error fetching data:', error);
-            });
+        fetch('https://yt-react.onrender.com/videoData')
+        .then((response) => response.json())
+        .then((data) => {
+          console.log('Fetched video data:', data); 
+          setVideoData(data); 
+        })
+        .catch((error) => {
+          console.error('Error fetching data:', error);
+        });
     }, []);;
 
 
@@ -35,7 +35,7 @@ function MainContent() {
         { id: 11, title: 'Computer' },
     ];
 
-   
+
 
     return (
         <div className="main-content">
