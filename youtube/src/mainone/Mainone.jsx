@@ -2,13 +2,14 @@ import { useState, useEffect } from 'react';
 import './Mainone.css';
 
 function MainContent() {
-
+    
+    const API_URL = process.env.REACT_APP_API_URL;
 
     const [videoData, setVideoData] = useState([]);
 
 
     useEffect(() => {
-        fetch('https://yt-react.onrender.com/videoData')
+        fetch(`${API_URL}/videoData`)
         .then((response) => response.json())
         .then((data) => {
           console.log('Fetched video data:', data); 
