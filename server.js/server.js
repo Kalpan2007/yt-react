@@ -4,10 +4,9 @@ const app = express();
 app.use(express.json());
 
 app.use(cors({
-    origin: 'http://localhost:5173',
-  }));
-
- const videoData = [
+    origin: '*', 
+}));
+const videoData = [
     {
         id: 1,
         thumbnail:
@@ -112,11 +111,11 @@ app.use(cors({
 ];
 
 
-      app.get("/videoData", (req, res) => {
-        res.json(videoData);
-      });
+app.get("/videoData", (req, res) => {
+    res.json(videoData);
+});
 
-      const PORT = 5000;
+const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
-  console.log(`Server running on port ${PORT}`);
+    console.log(`Server running on port ${PORT}`);
 });
