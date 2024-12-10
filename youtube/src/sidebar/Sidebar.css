@@ -1,0 +1,65 @@
+.logopart {
+  display: flex;
+  padding-top: 15px;
+  padding-left: 35px;
+}
+
+.logo {
+  padding-left: 35px;
+  padding-top: 2px;
+}
+
+.part2 {
+  margin-top: 45px;
+  padding-left: 35px;
+}
+
+.part2item {
+  display: flex;
+  padding-top: 5px;
+}
+
+.part2t {
+  color: white;
+  padding-left: 30px;
+  padding-top: 5px;
+}
+
+.hr {
+  width: 90%;
+  margin-left: 10px;
+  margin-top: 20px;
+}
+
+.part3 {
+  margin-top: 15px;
+  padding-left: 35px;
+}
+
+.part4h {
+  color: gray;
+  margin-left: 35px;
+  margin-top: 10px;
+}
+
+.subscriptions-container {
+  margin-top: 20px;
+}
+
+.subs {
+  margin-top: 15px;
+  margin-left: 35px;
+  display: flex;
+  align-items: center;
+}
+
+.subs img {
+  width: 30px;
+  height: 30px;
+}
+
+.substext {
+  color: white;
+  padding-left: 30px;
+  padding-top: 2px;
+}
