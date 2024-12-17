@@ -1,7 +1,7 @@
 import './Sidebar.css'
 
 
-function Sidebar() {
+function Sidebar(category,setCategory) {
     const subscriptions = [
         { id: 1, title: "Nadir On the go", imgurl: "https://github.com/PatelNeelMahesh/frontend_tasks/blob/main/02.youtube-clone/assets/Ellipse%201.png?raw=true" },
         { id: 2, title: "Coke Studios", imgurl: "https://github.com/PatelNeelMahesh/frontend_tasks/blob/main/02.youtube-clone/assets/Ellipse%201%20(1).png?raw=true" },
@@ -10,7 +10,9 @@ function Sidebar() {
     ];
 
 
-
+    const forprops = (newCategory) => {
+        setCategory(newCategory);
+      };
 
     return (
         <>
@@ -24,7 +26,7 @@ function Sidebar() {
                     </div>
                 </div>
                 <div className="part2">
-                    <div className="part2item">
+                    <div className="part2item" onClick={forprops}>
                         <div>
                             <img src="https://github.com/PatelNeelMahesh/frontend_tasks/blob/main/02.youtube-clone/assets/home.png?raw=true" alt="" />
                         </div>
